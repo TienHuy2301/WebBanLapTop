@@ -57,7 +57,7 @@ if (isset($_GET['cartId'])) {
                         <th>Gía <i class="fa fa-money" aria-hidden="true"></i></th>
                         <th>Số Lượng</th>
                         <th>Thành Tiền</th>
-                        <th>Action <i class="fa fa-magic" aria-hidden="true"></i></th>
+                        <th>Tác Vụ <i class="fa fa-magic" aria-hidden="true"></i></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,7 +81,7 @@ if (isset($_GET['cartId'])) {
                                     <form action="" method="POST">
                                         <input type="hidden" name="cartId" value="<?php echo $result['cartId'] ?>">
                                         <input min="1" type="number" name="quantity" value="<?php echo $result['quantity'] ?>">
-                                        <input type="submit" name="submit" value="update">
+                                        <input type="submit" name="submit" value="Cập Nhật">
                                     </form>
                                 </td>
                                 <td>
@@ -108,6 +108,7 @@ if (isset($_GET['cartId'])) {
                 </tbody>
             </table>
         </div>
+    
         <div class="row">
             <?php
             $check_cart = $ct->get_product_cart();
@@ -116,7 +117,7 @@ if (isset($_GET['cartId'])) {
                 <table style="float:right;text-align:left;" width="40%">
                     <tr>
                         <th>Tổng Tiền : </th>
-                        <td>
+                        <td style="font-weight: bold;">
                             <?php
                                 echo number_format($subtotal);
                                 ?> VNĐ</td>

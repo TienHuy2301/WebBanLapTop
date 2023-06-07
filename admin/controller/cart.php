@@ -68,10 +68,10 @@ class cart
         $result = $this->db->update($query);
 
         if ($result) {
-            $alert = '<p class="alert alert-success text-center">Update giỏ hàng thành công</p>';
+            $alert = '<p class="alert alert-success text-center">Cập Nhật giỏ hàng thành công</p>';
             return $alert;
         } else {
-            $alert = '<p class="alert alert-danger text-center">update giỏi hàng thất bại</p>';
+            $alert = '<p class="alert alert-danger text-center">Cập Nhật giỏi hàng thất bại</p>';
             return $alert;
         }
     }
